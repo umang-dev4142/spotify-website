@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Download for Desktop</title>
+    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+
+    <!--CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- Fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiperjs CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <style>
+        .navbar{
+            display: flex;
+        }
+        html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #000;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    swiper-container {
+        width: auto;
+        height: auto;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height:208px;
+      width: 250px;
+    }
+
+    swiper-slide .card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    swiper-container {
+      width: 100%;
+      height: auto;
+      margin: 20px auto;
+    }
+
+    .append-buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .append-buttons button {
+      display: inline-block;
+      cursor: pointer;
+      border: 1px solid #007aff;
+      color: #007aff;
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin: 0 10px;
+      font-size: 13px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" style="background-color: black">
+
+        <!-- NavBar Start -->
+        <div class="row">
+            <div class="col-sm-5">
+                <nav class="navbar m-0 my-1 p-0">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="Images/logo.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top img-fluid">
+                        </a>
+                        <a class="navbar-brand bg-dark rounded-circle p-1" href="index.html">
+                            <img src="Images/home.png" alt="Bootstrap" width="40" height="30" class="d-inline-block align-text-top img-fluid ">
+                        </a>
+                        <div class="navbar h-100 w-75 rounded-pill bg-dark p-1">
+                            <i class="fa-solid fa-magnifying-glass mx-3" style="color: rgba(203, 206, 208,0.75 );"></i>
+                            <form class="d-flex h-100 b-0" role="search" style="width: 88%;">
+                                <input class="form-control b-0 bg-dark border-dark" data-bs-theme="dark" type="search" placeholder="What do you want to play" aria-label="Search" />
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-5 p-0">
+                <nav class="navbar navbar-expand-lg my-2 p-0">
+                    <div class="container-fluid p-0">           
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold active" aria-current="page" href="Premium.html" style="color: rgb(164, 164, 164);">Premium </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold active" aria-current="page" href="Support.html"  style="color: rgb(164, 164, 164);">Support</a>
+                                </li>
+                                <li class="nav-item pe-3" style="border-right:2px solid rgb(160, 160, 160);">
+                                   <a class="nav-link fw-bold active" aria-current="page" href="#" style="color: rgb(164, 164, 164);">Download</a>
+                                </li>
+                            </ul>
+                            <form class="container-fluid justify-content-start pe-0">
+                                <a href="Install App.html"><button class="btn btn-outline-success border-dark my-0 fw-bold p-0 me-5 ms-1 border-0" type="button" style="color: rgb(164, 164, 164); font-size:15px ;">
+                                    <i class="fa-regular fa-circle-down"></i>
+                                    Install App
+                                </button></a>
+                                <a href="Sign up.html"><button class="btn btn-outline-success border-dark mx-3 my-0 fw-bold p-0 border-0" type="button" style="color: rgb(164, 164, 164); font-size: small;">Sign up</button></a>
+                                <a href="Login.html"><button class="btn btn-outline-success border-light  me-0 px-4  bg-light fw-bold rounded-pill text-dark align-items-end" type="button">Login</button></a>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+        <!-- NavBar End -->
+
+        <!-- Body Starts  -->
+         <div class="row mt-2">
+            <!-- Library Starts -->
+            <div class="col-sm-4 pe-0">
+
+                <div class="container-fluid text-light p-1 rounded-3" style="background-color: rgb(26, 25, 25);">
+                    <div class="col-sm-12 mt-3 ps-3">
+                        <i class="fw-bold ">Your Library</i>
+                        <i class="fa-solid fa-plus float-end mx-3"></i>
+                    </div>
+
+                    <div class="container-fluid px-0 mt-5" style="overflow-y: scroll; height: 250px;" data-bs-theme="dark">
+                        <div class="col-sm-12 mx-auto bg-dark rounded-3 p-3" >
+                            <h6>Create your first playlist</h6>
+                            <p>It's easy ,we'll help you</p>
+                            <button class="btn btn-outline-success border-light me-0 px-3  bg-light fw-bold rounded-pill text-dark align-items-end" style="font-size:0.9rem;" type="button">Create playlist</button>
+                        </div>
+                        
+                        <div class="col-sm-12 mx-auto bg-dark rounded-3 p-3 my-3" >
+                            <h6>Let's find some podcasts to follow</h6>
+                            <p>We'll keep you updated on new episodes</p>
+                            <button class="btn btn-outline-success border-light me-0 px-3  bg-light fw-bold rounded-pill text-dark align-items-end" style="font-size:0.9rem;" type="button">Browse podcasts</button>
+                        </div>
+                    </div>
+
+                    <!-- Important link Start -->
+                     <div class="container-fluid pt-4">
+                        <ul class="ps-0 list-unstyled mb-2 mx-2">
+                            <li class="list-inline-item me-3">
+                                <a href="#" class="text-decoration-none " style="color: rgba(203, 206, 208,0.75 ); font-size: x-small;">Legal</a>
+                            </li>
+                            <li class="list-inline-item me-3">
+                                <a href="#" class="text-decoration-none" style="color: rgba(203, 206, 208,0.75 ); font-size: x-small;">Safety & Privacy Center </a>
+                            </li>
+                            <li class="list-inline-item me-3">
+                                <a href="#" class="text-decoration-none" style="color: rgba(203, 206, 208,0.75 );font-size: x-small;">Privacy Policy</a>
+                            </li>
+                            <li class="list-inline-item me-3">
+                                <a href="#" class="text-decoration-none" style="color: rgba(203, 206, 208,0.75 ); font-size: x-small;">Cookies</a>
+                            </li>
+                        </ul>
+                        <ul class="ps-0 list-unstyled mb-2 mx-2">
+                            <li class="list-inline-item me-3">
+                                <a href="#" class="text-decoration-none " style="color: rgba(203, 206, 208,0.75 ); font-size: x-small;">AboutAds</a>
+                            </li>
+                            <li class="list-inline-item me-3">
+                                <a href="#" class="text-decoration-none" style="color: rgba(203, 206, 208,0.75 ); font-size: x-small;">Accessibility </a>
+                            </li>
+                        </ul>
+                        <ul class="ps-0 list-unstyled mb-2 mx-2">
+                            <li class="list-inline-item me-3">
+                                <a href="#" class="text-decoration-none text-light " style="font-size:small;">Cookies</a>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn bg-dark text-white fs-6 fw-bolder ps-2 pe-3 py-1 rounded-pill border-secondary mt-4 mb-5 ms-3"
+                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                        <i class="fa-solid fa-globe me-1"></i> English
+                         </button>
+
+                     </div>
+                    <!-- Important link End -->
+                </div>
+            </div>
+            <!-- Library Ends -->
+
+            <!-- Trending Songs Starts -->
+            <div class="col-sm-8">
+                <div class="container-fluid p-0 text-light rounded-3" >
+                    <div class="container-fluid" style="overflow-y: scroll; height: 513px;" data-bs-theme="dark">
+                        <!-- Download Body Starts -->
+                         <div class="container-fluid p-5 bg-15 rounded-3">
+                              <div class="container-fluid p-5 bg-14">
+                                   <!-- Logo Starts -->
+                                   <div class="row p-0">
+                                        <div class="col-sm-12 p-0">
+                                             <nav class="navbar">
+                                                  <div class="container-fluid p-0">
+                                                       <a class="navbar-brand text-dark fw-bolder" href="index.html">
+                                                            <img src="Images/logo2.png" alt="Logo" width="30" height="28" class="d-inline-block align-text-top">
+                                                            Spotify
+                                                       </a>
+                                                  </div>
+                                             </nav>
+                                        </div>
+                                   </div>
+                                   <!-- Logo Ends -->
+
+                                   <!-- Download Spotify for Windows Starts -->
+                                    <div class="row p-0">
+                                        <div class="col-sm-12 p-0">
+                                             <p class="text-dark fs-3 fw-bolder">Download Spotify for Windows</p>
+                                             <p class="text-dark fs-5">
+                                                  Enjoy high-quality audio and offline playback, plus Windows Game Bar integration and a friend activity feed that lets you see what your friends are listening to in real time.
+                                             </p>
+                                        </div>
+                                    </div>
+                                   <!-- Download Spotify for Windows Ends -->
+
+                                   <!-- Microsoft Store Starts -->
+                                   <div class="row p-0">
+                                        <div class="col-sm-12 p-0">
+                                             <img part="img" src="https://get.microsoft.com/images/en-us dark.svg" class="large mb-3" alt="Microsoft Store app badge">
+                                             <br>
+                                             <a href="#" class="text-dark text-decoration-none">Download directly from Spotify</a>
+                                        </div>
+                                   </div>
+                                   <!-- Microsoft Store Ends -->
+
+                                   <!-- Img Starts -->
+                                   <div class="row p-0 mt-5">
+                                        <div class="col-sm-12 mx-auto">
+                                             <img class="w-100 h-100" alt="" src="https://open.spotifycdn.com/cdn/images/download-page-image.781553a2.png" >
+                                        </div>
+                                   </div>
+                                    <!-- Img Ends -->
+
+                              </div>
+                         </div>
+                        <!-- Download Body Starts -->
+
+                        <!-- Footer Start -->
+                        <div class="container-fluid border-top border-bottom my-5 border-1 border-secoundary">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <ul class="ps-0 list-unstyled py-5">
+                                        <li class="mb-3"><a href="#" class="fw-bolder fs-5 text-light text-decoration-none">Company</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">About</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">Jobs</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">For the Record</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-2">
+                                    <ul class="ps-0 list-unstyled py-5">
+                                        <li class="mb-3"><a href="#" class="fw-bolder fs-5 text-light text-decoration-none">Communities</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">For Artists</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">Developers</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">Advertising</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">Investors</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">Vendors</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-2">
+                                    <ul class="ps-0 list-unstyled py-5">
+                                        <li class="mb-3"><a href="#" class="fw-bolder fs-5 text-light text-decoration-none">Useful links</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">Support</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">Free Mobile App</a></li>
+                                        <!-- <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">For the </a></li> -->
+                                    </ul>
+                                </div>
+                                <div class="col-sm-2">
+                                    <ul class="ps-0 list-unstyled py-5">
+                                        <li class="mb-3"><a href="#" class="fw-bolder fs-5 text-light text-decoration-none">Sportify Plans</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">Premium Individual</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">Preminum Duo</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">Premium Family</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">Premium Student</a></li>
+                                        <li class="mb-2"><a href="#"class="fw-bolder text-decoration-none" style="color: rgba(203, 206, 208,0.75 );">Sportify Free</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3 mx-4">
+                                    <ul class="ps-0 list-unstyled py-5">
+                                        <li class="m-3"><a href="#" class="fw-bolder fs-5 text-light text-decoration-none"></a></li>
+                                        <li class="ms-5 me-3 px-2 py-1 bg-dark bg-light fs-6 list-inline-item rounded-circle"><a href="#"class="fw-bolder text-decoration-none" style="color: white;"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li class="me-3 px-2 py-1 bg-dark bg-light fs-6 list-inline-item rounded-circle"><a href="#"class="fw-bolder text-decoration-none" style="color:white;"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li class="me-3 px-2 py-1 bg-dark bg-light fs-6 list-inline-item rounded-circle"><a href="#"class="fw-bolder text-decoration-none" style="color:white"><i class="fa-brands fa-facebook"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>                           
+                        </div>
+                        <!-- Footer End -->
+                        <div class="container-fluid my-5 pb-3 text-secoundary">
+                            <p style="color: #d0cdcd; font-size: smaller;">&copy 2025 Spotify umang tiwari</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Trending Songs Endss -->
+
+         </div>
+        <!-- Body Ends  -->
+
+        <!-- Footer Start -->
+        <div class="row p-2 mx-1 my-2 rounded-1" style="background-image: linear-gradient(90deg,#af2896, #509bf5);">
+            <div class="col-sm-10">
+                <div class="col-sm-12 fw-bolder">Preview of Spotify</div>
+                <div class="col-sm-12">Sign up to get unlimited songs and podcasts with occasional ads.No credit card needed.</div>
+            </div>
+            <div class="col-sm-2 px-4">
+                <a href="Sign up.html"><button class="btn btn-outline-success border-light ms-4 me-0 px-4 py-2 bg-light rounded-pill text-dark align-items-end" type="button" style="font-weight: 800;"> Sign up free </button></a>
+            </div>
+        </div>
+        <!-- Footer Ends -->
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="JS/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiperjs JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+</html>
