@@ -18,125 +18,116 @@
     <!-- Swiperjs CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-    <style>
-        .navbar{
-            display: flex;
+ <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Helvetica, Arial, sans-serif;
         }
-        html,
-    body {
-      position: relative;
-      height: 100%;
-    }
 
-    body {
-      background: #000;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
+        /* ---------- NAVBAR ---------- */
+        .search-bar {
+            max-width: 420px;
+            width: 100%;
+        }
 
-    swiper-container {
-        width: auto;
-        height: auto;
-    }
+        .search-bar input {
+            background: #121212;
+            border: none;
+            color: #fff;
+        }
 
-    swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #444;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height:208px;
-      width: 250px;
-    }
+        .search-bar input:focus {
+            box-shadow: none;
+        }
 
-    swiper-slide .card img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+        /* ---------- SWIPER CARDS ---------- */
+        swiper-container {
+            width: 100%;
+            padding: 20px 0;
+        }
 
-    swiper-container {
-      width: 100%;
-      height: auto;
-      margin: 20px auto;
-    }
+        swiper-slide {
+            width: 220px;
+            height: 210px;
+            background: #181818;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .append-buttons {
-      text-align: center;
-      margin-top: 20px;
-    }
+        .card {
+            background: transparent;
+            border: none;
+            position: relative;
+        }
 
-    .append-buttons button {
-      display: inline-block;
-      cursor: pointer;
-      border: 1px solid #007aff;
-      color: #007aff;
-      text-decoration: none;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin: 0 10px;
-      font-size: 13px;
-    }
-    </style>
+        .card img {
+            border-radius: 10px;
+        }
+
+        .hover-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .card:hover .hover-button {
+            opacity: 1;
+        }
+
+        /* ---------- DESKTOP BREAKPOINTS ---------- */
+        @media (min-width: 1200px) {
+            .container-fluid {
+                max-width: 1400px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar-right {
+                justify-content: center !important;
+                margin-top: 10px;
+            }
+        }
+    </style>     
 </head>
 <body>
     <div class="container-fluid" style="background-color: black">
 
         <!-- NavBar Start -->
-        <div class="row">
-            <div class="col-sm-5">
-                <nav class="navbar m-0 my-1 p-0">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="Images/logo.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top img-fluid">
-                        </a>
-                        <a class="navbar-brand bg-dark rounded-circle p-1" href="index.html">
-                            <img src="Images/home.png" alt="Bootstrap" width="40" height="30" class="d-inline-block align-text-top img-fluid ">
-                        </a>
-                        <div class="navbar h-100 w-75 rounded-pill bg-dark p-1">
-                            <i class="fa-solid fa-magnifying-glass mx-3" style="color: rgba(203, 206, 208,0.75 );"></i>
-                            <form class="d-flex h-100 b-0" role="search" style="width: 88%;">
-                                <input class="form-control b-0 bg-dark border-dark" data-bs-theme="dark" type="search" placeholder="What do you want to play" aria-label="Search" />
-                            </form>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <div class="col-sm-2"></div>
-            <div class="col-sm-5 p-0">
-                <nav class="navbar navbar-expand-lg my-2 p-0">
-                    <div class="container-fluid p-0">           
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link fw-bold active" aria-current="page" href="Premium.html" style="color: rgb(164, 164, 164);">Premium </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link fw-bold active" aria-current="page" href="Support.html"  style="color: rgb(164, 164, 164);">Support</a>
-                                </li>
-                                <li class="nav-item pe-3" style="border-right:2px solid rgb(160, 160, 160);">
-                                   <a class="nav-link fw-bold active" aria-current="page" href="#" style="color: rgb(164, 164, 164);">Download</a>
-                                </li>
-                            </ul>
-                            <form class="container-fluid justify-content-start pe-0">
-                                <a href="Install App.html"><button class="btn btn-outline-success border-dark my-0 fw-bold p-0 me-5 ms-1 border-0" type="button" style="color: rgb(164, 164, 164); font-size:15px ;">
-                                    <i class="fa-regular fa-circle-down"></i>
-                                    Install App
-                                </button></a>
-                                <a href="Sign up.html"><button class="btn btn-outline-success border-dark mx-3 my-0 fw-bold p-0 border-0" type="button" style="color: rgb(164, 164, 164); font-size: small;">Sign up</button></a>
-                                <a href="Login.html"><button class="btn btn-outline-success border-light  me-0 px-4  bg-light fw-bold rounded-pill text-dark align-items-end" type="button">Login</button></a>
-                            </form>
-                        </div>
-                    </div>
-                </nav>
+       <div class="row align-items-center">
 
+        <!-- LEFT -->
+        <div class="col-lg-5 col-md-12 d-flex align-items-center gap-3">
+            <a href="index.html" class="text-decoration-none">
+                <img src="Images/logo.png" width="35" alt="logo">
+            <img src="Images/home.png" width="40" class="bg-dark rounded-circle p-2" alt="home">
+
+            </a>
+            <div class="search-bar d-flex align-items-center rounded-pill px-3">
+                <i class="fa fa-search me-2 text-secondary"></i>
+                <input type="text" class="form-control" placeholder="What do you want to play">
             </div>
         </div>
+
+        <!-- RIGHT -->
+        <div class="col-lg-7 col-md-12 navbar-right d-flex justify-content-end align-items-center gap-3">
+            <a class="text-secondary fw-bold text-decoration-none" href="Premium.html">Premium</a>
+            <a class="text-secondary fw-bold text-decoration-none" href="Support.html">Support</a>
+            <a class="text-secondary fw-bold text-decoration-none" href="#">Download</a>
+
+            <a class="text-secondary fw-bold text-decoration-none" href="Install App.html">
+                <i class="fa-regular fa-circle-down"></i> Install App
+            </a>
+
+            <a class="text-secondary fw-bold text-decoration-none" href="Sign up.html">Sign up</a>
+            <button class="btn btn-light rounded-pill px-4 fw-bold text-decoration-none"><a href="Login.html"class="text-secondary fw-bold text-decoration-none">Login</a></button>
+        </div>
+    </div>
         <!-- NavBar End -->
 
         <!-- Body Starts  -->
